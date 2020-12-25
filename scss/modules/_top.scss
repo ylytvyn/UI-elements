@@ -1,0 +1,57 @@
+.top {
+	@include size(calc(100% - 200px), calc(100% - 60px));
+	margin-left: 100px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	&__wrapper {
+		height: calc(100vh - 80px);
+		position: relative;
+	}
+
+	&__pages {
+		@include pos($b: 40px);
+		width: 100%;
+
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+		}
+
+		li {
+			padding: 0 7px;
+
+			button {
+				@include size(17px);
+				border-radius: 50%;
+				background: rgba(255, 255, 255, .5);
+				overflow: hidden;
+				text-indent: -30px;
+				cursor: pointer;
+
+				&:hover {
+					background: $green;
+				}
+			}
+
+			&.slick-active {
+				button {
+					background: #fff;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font: 70px/85px $title;
+        margin-bottom: 20px;
+        color: $green;
+	}
+
+	&__text {
+		@include font(25px, 300, 35px);
+		margin-bottom: 35px;
+		padding: 0 20%;
+	}
+}

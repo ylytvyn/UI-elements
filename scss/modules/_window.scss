@@ -1,0 +1,23 @@
+.window {
+    display: none;
+    color: #000;
+
+    h2 {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+
+    button {
+        background: $green;
+        color: #000;
+        font: 600 15px/1 $text;
+        transition: all .3s;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+}

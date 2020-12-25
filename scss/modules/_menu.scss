@@ -1,0 +1,46 @@
+.menu {
+    @include pos(fixed, $r: 20px, $t: 50%);
+    transform: translateY(-50%);
+    z-index: 9;
+    
+    &__item {
+        margin: 10px 0;
+    }
+
+    &__link {
+        @include size(10px);
+        text-decoration: none;
+        color: rgba(255, 255, 255, .7);
+        background: currentColor;
+        border-radius: 50%;
+        display: block;
+        box-shadow: 0 0 35px 10px rgba(255, 255, 102, .5);
+
+        &:hover,
+        &.menu__active {
+            color: $green;
+
+            .menu__text {
+                opacity: 1;
+                visibility: visible;
+                margin-right: 20px;
+            }
+        }
+
+        &.menu__active {
+            color: #fff;
+        }
+    }
+
+    &__text {
+        float: right;
+        text-transform: uppercase;
+        color: $green;
+        font-weight: 600;
+        font-size: 10px;
+        margin-top: -1px;
+        transition: all .4s;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
